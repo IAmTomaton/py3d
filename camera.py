@@ -6,7 +6,7 @@ import math
 
 class Camera:
 
-    def __init__(self, width = 64, height = 64):
+    def __init__(self, width=64, height=64):
         self._width = width
         self._height = height
         self.reset()
@@ -38,10 +38,10 @@ class Camera:
 
     def turn_y(self, angle):
         turn = np.eye(3)
-        turn[0, 0] = math.cos(angle);
-        turn[0, 2] = math.sin(angle);
-        turn[2, 0] = -math.sin(angle);
-        turn[2, 2] = math.cos(angle);
+        turn[0, 0] = math.cos(angle)
+        turn[0, 2] = math.sin(angle)
+        turn[2, 0] = -math.sin(angle)
+        turn[2, 2] = math.cos(angle)
         self._basis = self._basis.dot(turn)
 
     def turn_x(self, angle):

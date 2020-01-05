@@ -45,11 +45,11 @@ class Window:
         button_back.grid(row=2, column=4)
 
         button_turn_up = Button(self._root, text="turn_up",
-                           command=lambda: self.turn_camera_x(1))
+                                command=lambda: self.turn_camera_x(1))
         button_turn_up.grid(row=3, column=2)
 
         button_turn_down = Button(self._root, text="turn_down",
-                             command=lambda: self.turn_camera_x(-1))
+                                  command=lambda: self.turn_camera_x(-1))
         button_turn_down.grid(row=5, column=2)
 
         button_turn_left = Button(self._root, text="turn_left",
@@ -57,7 +57,7 @@ class Window:
         button_turn_left.grid(row=4, column=1)
 
         button_turn_right = Button(self._root, text="turn_right",
-                              command=lambda: self.turn_camera_y(-1))
+                                   command=lambda: self.turn_camera_y(-1))
         button_turn_right.grid(row=4, column=3)
 
         button_show_basis = Button(self._root, text="show_basis",
@@ -77,13 +77,13 @@ class Window:
         self._update_image()
 
     def turn_camera_y(self, direction):
-        angle = pi / 4 * direction
+        angle = pi / 12 * direction
         self._space.camera.turn_y(angle)
         self._update_image()
 
     def turn_camera_x(self, direction):
         return
-        angle = pi / 4 * direction
+        angle = pi / 12 * direction
         self._space.camera.turn_x(angle)
         self._update_image()
 

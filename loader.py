@@ -25,5 +25,7 @@ class Loader:
                        self._parse_vector(byte_polygon[0:12]))
 
     def _parse_vector(self, byte_vector):
-        vector = np.array([struct.unpack('<f', byte_vector[i * 4: (i + 1) * 4])[0] for i in range(3)])
+        array = [struct.unpack('<f', byte_vector[i * 4: (i + 1) * 4])[0]
+                 for i in range(3)]
+        vector = np.array(array)
         return vector

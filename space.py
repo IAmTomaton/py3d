@@ -38,7 +38,7 @@ class Space:
         light = self._camera.project_point(self._light.position)
         matrix = self.visualizer.visualize(camera_polygons,
                                            light, self.camera.size)
-        
+
         byte = bytearray()
         for i in range(len(matrix[0])):
             for j in range(len(matrix)):

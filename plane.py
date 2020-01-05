@@ -15,7 +15,8 @@ class Plane:
         return np.dot(self._normal, point) - self._bias
 
     def get_z(self, x, y):
-        return (self._bias - self._normal[0] * x - self._normal[1] * y) / self._normal[2]
+        return (self._bias - self._normal[0] * x - self._normal[1] * y) /\
+            self._normal[2]
 
     def get_coefficient_z(self):
         return self._normal[2]

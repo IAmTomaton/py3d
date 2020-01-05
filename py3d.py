@@ -6,6 +6,9 @@ from window import Window
 import numpy as np
 
 
+MODEL = "test3.stl"
+
+
 def main():
     loader = Loader()
     camera = Camera(width=256, height=256)
@@ -13,7 +16,7 @@ def main():
     light.move(np.array([0, 0, -100]))
     visualizer = Visualizer()
     space = Space(camera, light, visualizer, loader)
-    space.load("test3.stl")
+    space.load(MODEL)
     window = Window(space)
 
 
